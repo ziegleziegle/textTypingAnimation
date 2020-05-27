@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document22</title>
+    <style>
+        span {
+            font-size: 3.8rem;
+        }
+        #wrap {
+            position:absolute;
+            animation-name: move;
+            animation-duration: 2.5s;
+        }
+        @keyframes move {
+            0% {
+                left:10px;
+            }
+            80% {
+                left:300px;
+            }
+            100% {
+                left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <span class="ltr1">싱</span>
+        <span class="ltr2">싱</span>
+        <span class="ltr3">한</span>
+        <span class="ltr4">수</span>
+        <span class="ltr5">박</span>
+    </div>
+
+    <script>
+        var ltr1 = document.querySelector('.ltr1')
+        var letters = '가나다라마바abcdefg!@#$%^&*()_+'
+        var aryNumb = []
+
+        for (var i = 0; i < 5; i++) {
+                var num = Math.floor(letters.length * Math.random());
+                var letter = letters.charAt(num);
+                aryNumb.push(letter)
+                var set = Array.from(new Set(aryNumb))
+                // console.log(set)
+            };
+
+        var cnt = 0
+
+        // console.log(letter)
+        var runCylce = setInterval(() => {
+                ltr1.innerHTML=set[cnt]
+                cnt++
+
+                if(cnt > set.length-1) {
+                    clearInterval(runCylce)
+                    ltr1.innerHTML='싱'
+                }
+            }, 150);
+// ------------------------------------------------------
+
+        var ltr2 = document.querySelector('.ltr2')
+        var letters2 = '가나다라마바abcdefg!@#$%^&*()_+'
+        var aryNumb2 = []
+
+        for (var i = 0; i < 5; i++) {
+                var num2 = Math.floor(letters2.length * Math.random());
+                var letter2 = letters2.charAt(num2);
+                aryNumb2.push(letter2)
+                var set2 = Array.from(new Set(aryNumb2))
+                // console.log(set)
+            };
+
+        var cnt2 = 0
+
+        // console.log(letter)
+        var runCylce2 = setInterval(() => {
+                ltr2.innerHTML=set2[cnt2]
+                cnt2++
+
+                if(cnt2 > set2.length-1) {
+                    clearInterval(runCylce2)
+                    ltr2.innerHTML='싱'
+                }
+            }, 300);
+// ------------------------------------------------------
+        var ltr3 = document.querySelector('.ltr3')
+        var letters3 = '가나다라마바abcdefg!@#$%^&*()_+'
+        var aryNumb3 = []
+
+        for (var i = 0; i < 5; i++) {
+                var num3 = Math.floor(letters3.length * Math.random());
+                var letter3 = letters3.charAt(num3);
+                aryNumb3.push(letter3)
+                var set3 = Array.from(new Set(aryNumb3))
+                // console.log(set)
+            };
+
+        var cnt3 = 0
+
+        // console.log(letter)
+        var runCylce3 = setInterval(() => {
+                ltr3.innerHTML=set3[cnt3]
+                cnt3++
+
+                if(cnt3 > set3.length-1) {
+                    clearInterval(runCylce3)
+                    ltr3.innerHTML='한'
+                }
+            }, 350);
+// ------------------------------------------------------
+        var ltr4 = document.querySelector('.ltr4')
+        var letters4 = '가나다라마바abcdefg!@#$%^&*()_+'
+        var aryNumb4 = []
+
+        for (var a = 0; a < 5; a++) {
+                var num4 = Math.floor(letters4.length * Math.random());
+                var letter4 = letters4.charAt(num4);
+                aryNumb4.push(letter4)
+                var set4 = Array.from(new Set(aryNumb4))
+                // console.log(set)
+            };
+
+        var cnt4 = 0
+
+        // console.log(letter)
+        var runCylce4 = setInterval(() => {
+                ltr4.innerHTML=set4[cnt4]
+                cnt4++
+
+                if(cnt4 > set4.length-1) {
+                    clearInterval(runCylce4)
+                    ltr4.innerHTML='수'
+                }
+            }, 150);
+// ------------------------------------------------------
+
+
+    </script>
+</body>
+</html>
